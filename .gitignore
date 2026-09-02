@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+test.txt
+test.txt.sha256
