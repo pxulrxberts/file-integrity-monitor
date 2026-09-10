@@ -34,3 +34,21 @@ Verify file integrity:
 ## Security Purpose
 
 This project demonstrates defensive file-integrity monitoring. It should only be used on files and systems you own or are authorized to monitor.
+## Directory Monitoring – Version 2
+
+Create a baseline for an entire directory:
+
+    python3 fim.py create path/to/directory
+
+Check the directory for changes:
+
+    python3 fim.py check path/to/directory
+
+The monitor recursively checks files while ignoring `.git`, `__pycache__`, symbolic links, and its own baseline file.
+
+### Directory Results
+
+- `[ADDED]` – A new file appeared
+- `[MODIFIED]` – File contents changed
+- `[DELETED]` – A baseline file disappeared
+- `[OK]` – No integrity changes detected
